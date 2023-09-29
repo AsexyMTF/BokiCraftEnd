@@ -8,6 +8,8 @@ import lombok.Getter;
 public enum AuthorityEnum {
     Administrator("Administrator"),
     Acceptor("Acceptor"),
-    Asker("Asker");
+    Asker("Asker"),
+    Visitor("Visitor"),
+    None("None");
     private String value;
 }
