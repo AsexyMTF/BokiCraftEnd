@@ -1,16 +1,12 @@
 package online.boki.backend.Service;
 
 import lombok.extern.slf4j.Slf4j;
-import online.boki.backend.Enums.StatusCodeEnum;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
