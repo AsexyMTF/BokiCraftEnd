@@ -6,7 +6,8 @@ import online.boki.backend.Service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/ticket")
+@RequestMapping("/api/ticket")
+@CrossOrigin("*")
 @RestController
 public class TicketController {
     @Autowired

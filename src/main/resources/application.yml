@@ -6,9 +6,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
     properties:
-      hibernate:
-        ddl-auto: update
         format_sql: true
 server:
   port: 8080

@@ -2,7 +2,6 @@ package online.boki.backend.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import online.boki.backend.Enums.AuthorityEnum;
 import online.boki.backend.Enums.ProcessingStateEnum;
 
 @Entity
