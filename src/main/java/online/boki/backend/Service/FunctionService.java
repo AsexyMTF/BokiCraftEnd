@@ -14,7 +14,6 @@ import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
-@Slf4j
 @Service
 public class FunctionService {
     @Bean

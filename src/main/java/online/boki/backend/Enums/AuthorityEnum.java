@@ -6,10 +6,9 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum AuthorityEnum {
-    Administrator("Administrator"),
-    Acceptor("Acceptor"),
-    Asker("Asker"),
-    Visitor("Visitor"),
-    None("None");
-    private String value;
+    Administrator,
+    Acceptor,
+    Asker,
+    Visitor,
+    None;
 }
