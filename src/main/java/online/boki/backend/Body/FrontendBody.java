@@ -1,5 +1,6 @@
 package online.boki.backend.Body;
 
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import lombok.*;
 import online.boki.backend.Enums.StatusCodeEnum;
@@ -12,6 +13,7 @@ import online.boki.backend.Enums.StatusCodeEnum;
 public class FrontendBody {
     private StatusCodeEnum code;
     private JSONObject data;
+    private JSONArray listData;
     private String msg;
     private String dataText;
 
@@ -33,5 +35,10 @@ public class FrontendBody {
     public FrontendBody(StatusCodeEnum statusCodeEnum, JSONObject data) {
         this.code = statusCodeEnum;
         this.data = data;
+    }
+
+    public FrontendBody(StatusCodeEnum statusCodeEnum, JSONArray jsonArray) {
+        this.code = statusCodeEnum;
+        this.listData = jsonArray;
     }
 }

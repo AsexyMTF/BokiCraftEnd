@@ -3,6 +3,7 @@ package online.boki.backend.Model;
 import jakarta.persistence.*;
 import lombok.Data;
 import online.boki.backend.Enums.ProcessingStateEnum;
+import online.boki.backend.Enums.TicketTagEnum;
 
 @Entity
 @Table(name = "tickets")
@@ -23,4 +24,6 @@ public class Ticket {
     private String responseTime;
     @Column(name = "pending_status")
     private ProcessingStateEnum pendingStatus;
+    @Column(name = "tag")
+    private TicketTagEnum tag;
 }
