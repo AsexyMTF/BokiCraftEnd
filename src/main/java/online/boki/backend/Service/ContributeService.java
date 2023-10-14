@@ -1,5 +1,6 @@
 package online.boki.backend.Service;
 
+import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
 import online.boki.backend.Body.FrontendBody;
 import online.boki.backend.Enums.StatusCodeEnum;
@@ -8,7 +9,9 @@ import online.boki.backend.Repository.ContributeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
 import java.util.ResourceBundle;
 
 @Service
@@ -36,5 +39,22 @@ public class ContributeService {
         contribute1.setLiked(contribute1.getLiked() + 1);
         contributeRepository.save(contribute1);
         return new FrontendBody(StatusCodeEnum.Success, "Success");
+    }
+
+
+    public FrontendBody getAll() {
+        List<Contribute> contributeList=contributeRepository.findAll();
+        return new FrontendBody(StatusCodeEnum.Success, JSONArray.from(contributeList));
+    }
+
+
+    public FrontendBody getCard() {
+        List<Contribute> contributeList=contributeRepository.findContributesByHasPicture(true);
+        return new FrontendBody(StatusCodeEnum.Success, JSONArray.from(contributeList));
+    }
+
+    public FrontendBody getCommit() {
+        List<Contribute> contributeList=contributeRepository.findContributesByHasPicture(false);
+        return new FrontendBody(StatusCodeEnum.Success, JSONArray.from(contributeList));
     }
 }
